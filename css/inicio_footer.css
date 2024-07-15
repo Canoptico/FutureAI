@@ -1,0 +1,273 @@
+.section {
+  display: none;
+  padding-top: 100px;
+}
+
+#inicio {
+  display: block; /* Mostrar la sección "Inicio" por defecto */
+}
+
+.separator {
+  display: inline-block; /* Permite centrar verticalmente */
+  border-right: 3px solid black; /* Borde derecho negro más grueso */
+  height: 2em; /* Altura del separador */
+  vertical-align: middle; /* Centra verticalmente */
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.selected-item {
+            border-radius: 5px; /* Redondear las esquinas */
+            background-color: #9BC846;
+            border: 2px solid #333; /* Color del borde */
+        }
+
+.logo-container {
+  margin-bottom: 2%;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.list-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+}
+
+.carousel{
+  margin: 30px 10% 30px 10%;
+}
+
+.list-inline.text-left li.list-inline-item a {
+  text-decoration: none; /* Eliminar el subrayado predeterminado */
+  padding: 5px 10px; /* Añadir relleno para crear espacio alrededor del texto */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+  border-radius: 10px; /* Redondear las esquinas */
+}
+
+/* Estilos CSS para los enlaces cuando el ratón está encima */
+.list-inline.text-left li.list-inline-item a:hover {
+  background-color: #333; /* Cambiar el color de fondo cuando el ratón está encima */
+  color: #fff; /* Cambiar el color del texto cuando el ratón está encima */
+}
+
+.icon-link{
+  margin-right: 10px;
+}
+
+/* Hacer el texto no seleccionable */
+.container-menu {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.future {
+  color: #333;
+  padding-right: 1px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+.ai {
+  background-color: #333;
+  color: white;
+  padding-left: 3px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 3px;
+  border-radius: 3px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+}
+
+.container-menu {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-descripcion {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.arrow {
+      color: blue;
+      transform: rotate(-45deg);
+      display: inline-block;
+    }
+
+.subrayar-al-hover {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer; /* Cambiar el cursor al pasar por encima del botón */
+        text-decoration: none; /* Quitar subrayado por defecto */
+    }
+
+.subrayar-al-hover:focus {
+      outline: none; /* Elimina el contorno al hacer clic */
+    }
+
+.subrayar-al-hover:hover {
+        text-decoration: underline;
+    }
+
+.list-inline a {
+            color: #333;
+        }
+
+#footer, #lista-menu, #btnIniciarSesion, #inicio-sesion, #registro {
+	font-family: 'Nunito', sans-serif;
+}
+
+#lista-menu {
+	font-weight: bold;
+}
+
+#inicio {
+	font-family: 'Taviraj', serif;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #d04ccc;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  top: 20px; /* Ajusta según necesites */
+  right: 20px; /* Ajusta según necesites */
+  z-index: 9998; /* Asegura que el menú toggle esté en la capa superior */
+  padding: 10px;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.menu {
+  position: fixed;
+  top: 65px; /* Ajusta según necesites */
+  right: 20px; /* Ajusta según necesites */
+  z-index: 9999; /* Asegura que el menú esté debajo del menú toggle */
+  background-color: #fff; /* Ajusta el color de fondo del menú */
+  border: 1px solid #ccc; /* Añade un borde al menú */
+  padding: 10px; /* Ajusta el espacio interno del menú */
+  display: none; /* Oculta el menú inicialmente */
+  width: 150px; /* Ajusta el ancho del menú */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Añade sombra al menú */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.menu.active {
+  display: block; /* Muestra el menú cuando está activo */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+  text-align: center; /* Centra el texto de los elementos de lista */
+}
+
+.menu ul li a {
+  color: #333; /* Color por defecto */
+  text-decoration: none;
+  font-size: 18px;
+  position: relative; /* Añade posición relativa para el efecto de resaltado */
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #3A6517; /* Color del resaltado */
+  transition: width 0.3s ease-out, left 0.3s ease-out; /* Transición suave */
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.menu ul li a:hover {
+  color: #3A6517; /* Color al hacer hover */
+  text-decoration: underline; /* Subrayado al hacer hover */
+  font-weight: bold; /* Negrita al hacer hover */
+}
+
+#footer {
+            color: white !important;
+        }
+        #footer a {
+            color: white !important;
+        }
+
+body {
+            background-color: white;
+            color: #111111;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body.dark-mode {
+            background-color: #111111;
+            color: white;
+        }
+
+#toggleDarkMode {
+  outline: none;
+  margin-right: 80px;
+  margin-bottom: 3px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 24px; /* Ajusta el tamaño del ícono según sea necesario */
+}
+
+#toggleDarkMode i {
+  color: #333; /* Color del ícono */
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Excluir div del modo oscuro */
+body.dark-mode .exclude-dark-mode {
+  background-color: initial;
+  color: initial;
+  border-color: initial;
+}
+
+.icono-interrogacion {
+            color: #333; /* Color del icono */
+            background-color: transparent !important; /* Fondo transparente */
+            font-size: 24px; /* Tamaño del icono */
+            /* Puedes añadir más estilos según necesites */
+		border: none;
+		margin-bottom: 3px;
+		margin-right: 15px;
+		outline: none !important;
+        }
+
+

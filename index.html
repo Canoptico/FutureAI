@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>FutureAI</title>
+  <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/kvyp66hvw2yi022x7qdst/Icono-peque-o.png?rlkey=3edkn7qds6sp4y8f7udh726bl&st=5s7u8jpx&dl=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/registro_inicioSesion.css">
+  <link rel="stylesheet" href="css/inicio_footer.css">
+  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/estudiosRelaciones.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Taviraj">
+
+</head>
+<body>
+
+<div id="inicio-sesion" class="overlay overlay1 exclude-dark-mode" style="display: none;">
+  <div class="form-container">
+    <button id="btnCerrarSesion" class="boton-x">&#10006;</button>
+    <p class="title">Bienvenido!</p>
+    <form class="form">
+      <input type="email" class="input-sigin" placeholder="Email">
+      <input type="password" class="input-sigin" placeholder="Contraseña">
+      <p class="page-link-sigin">
+        <span class="page-link-label">¿Has olvidado tu contraseña?</span>
+      </p>
+      <button class="form-btn" style="background-color: #d04ccc;">Iniciar sesión</button>
+    </form>
+    <p class="sign-up-label">
+      Don't have an account?<span id="btnAbrirRegistro" class="sign-up-link" style="color: #d04ccc;">Registrarse</span>
+    </p>
+    <div class="buttons-container">
+      <div class="apple-login-button">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" class="apple-icon" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z"></path>
+        </svg>
+        <span>Iniciar sesión con Apple</span>
+      </div>
+      <div class="google-login-button">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" class="google-icon" viewBox="0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+  c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+  c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+          <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+  C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+          <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+  c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+          <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+  c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+        </svg>
+        <span>Iniciar sesión con Google</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="registro" class="overlay overlay2 exclude-dark-mode" style="display: none;">
+ <div class="form-container">
+      <button id="btnCerrarRegistro" class="boton-x">&#10006;</button>
+      <p class="title">Crear una cuenta</p>
+      <form id="registroForm" class="form">
+        <input type="text" id="registroNombre" class="input-sigin" placeholder="Nombre">
+        <input type="email" id="registroEmail" class="input-sigin" placeholder="Email">
+        <input type="password" id="registroPass" class="input-sigin" placeholder="Contraseña">
+        <button id="crearCuenta" class="form-btn" style="background-color: #d04ccc;">Crear cuenta</button>
+      </form>
+      <p class="sign-up-label">
+        Already have an account?<span id="btnVolverSesion" class="sign-up-link" style="color: #d04ccc;">Iniciar sesión</span>
+      </p>
+      <div class="buttons-container">
+        <div class="apple-login-button">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" class="apple-icon" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z"></path>
+          </svg>
+          <span>Registrarse con Apple</span>
+        </div>
+        <div class="google-login-button">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" class="google-icon" viewBox="0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+          </svg>
+          <span>Registrarse con Google</span>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="avisoRegistro" class="overlay overlay3 exclude-dark-mode" style="display: none;">
+	<div class="form-container" style="width: 300px; height: 200px;">
+		 <button id="btnCerrarAviso" onclick="cerrarAviso()" class="boton-x">&#10006;</button>
+		  <p style="padding-bottom: 0; margin-bottom: 0; padding-top: 10px">Inicia sesión primero por favor.</p>
+		<span id="btnAvisoSesion" class="sign-up-link" style="color: #d04ccc;">Iniciar sesión</span>
+		<h1 style="text-align: right;">:)</h1>
+	</div>
+</div>
+
+<div class="container-menu" style="background-color: #DCBCCA; min-width: 600px; overflow-x: auto; position: fixed; width: 100%; z-index: 998;">
+    <div class="row" style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap">
+        <img src="https://www.dropbox.com/scl/fi/pffl4rfog1g3xx7boy4wm/Logo.png?rlkey=ey0oujbbpuf0jzxtb4deuexgf&st=95innave&dl=1" class="img-fluid" alt="Logo" width="100" height="100">
+        <div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
+            <span class="future" onclick="mostrarInicio()" onmouseover="aumentarTamañoFuente()" onmouseout="reducirTamañoFuente()">Future</span><span class="ai" onclick="mostrarInicio()" onmouseover="aumentarTamañoFuente()" onmouseout="reducirTamañoFuente()">AI</span>
+        </div>
+        <li class="separator"></li>
+        <div class="col">
+            <div class="row align-items-center">
+                <div style="padding-left: 22px;">
+                    <a href="#inicio" onclick="mostrarInicio()">
+   			 <i id="inicio-icon" class="fas fa-house-user" style="color: #333;"></i>
+		    </a>
+                </div>
+                <div style="padding-left: 65px;">
+                  <a href="#estudios" onclick="mostrarEstudios()">
+                    <i id="estudios-icon" class="fas fa-graduation-cap" style="color: #333;"></i>
+      </a>
+              </div>
+              <div style="padding-left: 85px;">
+                  <a href="#relaciones" onclick="mostrarRelaciones()">
+                    <i id="relaciones-icon" class="fas fa-heart" style="color: #333;"></i>
+      </a>
+              </div>
+
+            </div>
+            <div class="row align-items-center">
+                <ul id="lista-menu" class="list-inline d-flex flex-nowrap text-left" style="margin-bottom: 0;">
+                    <li id="inicio-item" class="list-inline-item"><a href="#inicio" onclick="mostrarInicio()" class="selected-item">Inicio</a></li>
+                    <li id="estudios-item" class="list-inline-item"><a href="#estudios" onclick="mostrarEstudios()">Estudios</a></li>
+                    <li id="relaciones-item" class="list-inline-item"><a href="#relaciones" onclick="mostrarRelaciones()">Relaciones</a></li>
+                  </ul>
+            </div>
+        </div>
+	<button onclick="scrollToInicio()" class="icono-interrogacion">
+  <i class="fas fa-question-circle"></i>
+</button>
+	<button id="toggleDarkMode">
+  <i class="fas fa-moon"></i>
+</button>
+	<div class="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<nav class="menu" id="menu">
+  <ul>
+    <li><a href="#perfil" id="abrirPerfil">Perfil</a></li>
+    <li><a href="#registro" id="menuAbrirRegistro">Registrarse</a></li>
+    <li><a href="#inicio" id="btnIniciarSesion">Iniciar sesión</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+
+<div id="inicio" class="section">
+  <div id="presentacion" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#presentacion" data-slide-to="0" class="active"></li>
+      <li data-target="#presentacion" data-slide-to="1"></li>
+      <li data-target="#presentacion" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.dropbox.com/scl/fi/1s33hd7cfclwgvimwfgyl/Dise-o-sin-t-tulo.png?rlkey=fjggnsnbxnq8sko0m6lhqaku4&st=5mtd4nwj&dl=1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.dropbox.com/scl/fi/1hrcifiwp7t35ywfk3nzq/Dise-o-sin-t-tulo-1.png?rlkey=71qzabu2x9ogouqprwhkfhf8w&st=wz2nltfq&dl=1" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.dropbox.com/scl/fi/pt8dzubi2z81nouf0dvni/Dise-o-sin-t-tulo-2.png?rlkey=wmqb0p97rkprsziro2c1vcloo&st=h20kflrx&dl=1" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#presentacion" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#presentacion" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Sección de párrafos e imágenes alternados -->
+  <div class="container-descripcion mt-5">
+    <div class="row mb-4 justify-content-center align-items-center">
+      <div class="col-md-5">
+        <p style="text-align: justify;">Con la integración de datos en tiempo real provenientes de diversas fuentes como redes sociales, noticias, mercados financieros y más, "FutureAI" genera predicciones personalizadas para los usuarios. Los usuarios ingresan información relevante sobre sus vidas, como objetivos personales, profesionales y circunstancias actuales. La app procesa esta información y, combinándola con su análisis de datos globales, ofrece predicciones sobre posibles eventos futuros, oportunidades y riesgos. Además, "FutureAI" se actualiza constantemente, refinando sus predicciones a medida que recibe nuevos datos, ofreciendo así una guía dinámica y adaptativa para ayudar a los usuarios a tomar decisiones informadas sobre su futuro.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="https://www.dropbox.com/scl/fi/36wnuzdjw9zc5hyabpot0/Bola-m-gica.jpg?rlkey=ltkt98d1r3rxsh4szacbaju9b&st=2389kztl&dl=1" class="img-fluid" alt="Imagen 1">
+      </div>
+    </div>
+    <div class="row mb-4 justify-content-center align-items-center">
+      <div class="col-md-5 order-md-2">
+        <p style="text-align: justify;">El uso de "FutureAI" puede traer numerosos beneficios significativos. En primer lugar, proporciona a los usuarios una herramienta poderosa para la toma de decisiones, permitiéndoles anticiparse a posibles eventos y prepararse de manera adecuada. Esto puede resultar especialmente útil en la planificación financiera, profesional y personal, al identificar oportunidades y riesgos con antelación. Además, al recibir recomendaciones personalizadas basadas en datos precisos y actualizados, los usuarios pueden optimizar sus estrategias y acciones para alcanzar sus objetivos de manera más eficiente. La app también puede ayudar a reducir el estrés y la incertidumbre, proporcionando una sensación de control y previsibilidad sobre el futuro. Por último, "VisiónFutura" fomenta una mentalidad proactiva y estratégica, alentando a los usuarios a pensar a largo plazo y tomar decisiones informadas que mejoren su calidad de vida y bienestar general.</p>
+      </div>
+      <div class="col-md-3 order-md-1">
+        <img src="https://www.dropbox.com/scl/fi/vi2hacu1ydr1g8asguz32/Seguridad.jpg?rlkey=6iop5lglx3vu1kn2j7qhazh09&st=disenuvi&dl=1" class="img-fluid" alt="Imagen 2">
+      </div>
+    </div>
+    <div class="row mb-4 justify-content-center align-items-center">
+      <div class="col-md-5">
+        <p style="text-align: justify;">Por lo que respecta a la salud mental, "FutureAI" puede tener un impacto positivo significativo. La capacidad de anticipar eventos futuros y recibir orientación personalizada puede reducir considerablemente la ansiedad y el estrés asociados con la incertidumbre. Saber qué esperar y cómo prepararse permite a los usuarios sentirse más en control de sus vidas, lo que puede mejorar su bienestar emocional. Además, la app puede ofrecer recomendaciones específicas para el manejo del estrés y la ansiedad, basadas en las tendencias y patrones individuales de cada usuario. Al identificar momentos potencialmente estresantes o de alta presión con antelación, "FutureAI" puede sugerir técnicas de relajación, mindfulness y otras estrategias de autocuidado, ayudando a los usuarios a gestionar su salud mental de manera proactiva. También puede conectar a los usuarios con recursos adicionales, como terapeutas o comunidades de apoyo, si se detecta que necesitan ayuda profesional. En resumen, "VisiónFutura" no solo predice eventos futuros, sino que también proporciona herramientas y recomendaciones valiosas para mejorar la salud mental y fomentar una vida más equilibrada y tranquila.</p>
+      </div>
+      <div class="col-md-3">
+        <img src="https://www.dropbox.com/scl/fi/k2xgg3nfh0cz720aixmfs/Salud.png?rlkey=ciuicewf1qcp6t6b6tic8xgib&st=iv2lmh4e&dl=1" class="img-fluid" alt="Imagen 3">
+      </div>
+    </div>
+    <div class="row mb-4 justify-content-center align-items-center">
+      <div class="col-md-5 order-md-2">
+        <p style="text-align: justify;">En cuanto a la seguridad de los datos y la información, "FutureAI" se compromete a proteger la privacidad de sus usuarios mediante la implementación de medidas de seguridad robustas. La aplicación utiliza encriptación de extremo a extremo para garantizar que toda la información personal y sensible esté protegida contra accesos no autorizados. Además, se adhiere estrictamente a normativas de protección de datos como el Reglamento General de Protección de Datos (RGPD) en Europa y la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA) en Estados Unidos, asegurando que los datos se manejen con el máximo cuidado y transparencia. "FutureAI" también realiza auditorías de seguridad regulares y actualizaciones de software para identificar y mitigar cualquier vulnerabilidad potencial. Los usuarios tienen control total sobre sus datos, con opciones claras para gestionar permisos y configuraciones de privacidad. Asimismo, la app emplea técnicas avanzadas de anonimización y agregación de datos para garantizar que la información individual no pueda ser rastreada o utilizada para fines no autorizados. Con estas medidas, "FutureAI" ofrece a los usuarios una experiencia segura y confiable, protegiendo su información personal en todo momento.</p>
+      </div>
+      <div class="col-md-3 order-md-1">
+        <img src="https://www.dropbox.com/scl/fi/6bnipooodk04jbjcsdw43/Confidencial.jpg?rlkey=7sr8818o7ifns7dv70fruprwh&st=it6k00dw&dl=1" class="img-fluid" alt="Imagen 4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de pasos -->
+  <div class="container mt-5">
+    <h2 style="color: #D04CCC;">Pasos para iniciar una predicción</h2>
+    <ol>
+      <li>
+        <a href="#step1" id="pasosAbrirRegistro" class="step" style="color: #9BC846; font-weight: bold;">
+          Registrar una cuenta
+          <span class="arrow">&#8594;</span>
+        </a>
+        : Crea una cuenta proporcionando tus datos personales.
+      </li>
+      <li>
+        <a href="#step2" class="step" onclick="mostrarEstudios()" style="color: #9BC846; font-weight: bold;">
+          Hacer una predicción sobre tu futuro académico
+          <span class="arrow">&#8594;</span>
+        </a>
+        : Escoge entre las opciones disponibles la que mejor se adapte a tus necesidades.
+      </li>
+      <li>
+        <a href="#step3" class="step" onclick="mostrarRelaciones()" style="color: #9BC846; font-weight: bold;">
+          Hacer una predicción sobre tus futuras relaciones
+          <span class="arrow">&#8594;</span>
+        </a>
+        : Proporciona los datos necesarios y comienza el proceso.
+      </li>
+    </ol>
+  </div>
+
+  <div class="container mt-5">
+    <h2 style="color: #D04CCC;">Preguntas Frecuentes</h2>
+    <ul>
+        <li>
+            <h3 style="color: #DCBCCA; text-shadow: 2px 2px #333;">¿Cómo puedo restablecer mi contraseña?</h3>
+            <p>Puedes restablecer tu contraseña haciendo clic en el enlace "¿Olvidaste tu contraseña?" en la página de inicio de sesión. Se te enviará un correo electrónico con instrucciones sobre cómo crear una nueva contraseña.</p>
+        </li>
+        <li>
+            <h3 style="color: #DCBCCA; text-shadow: 2px 2px #333;">¿Es seguro proporcionar mis datos personales?</h3>
+            <p>Sí, la seguridad de tus datos personales es nuestra prioridad. Utilizamos medidas de seguridad avanzadas para proteger la información que nos proporcionas.</p>
+        </li>
+        <li>
+            <h3 style="color: #DCBCCA; text-shadow: 2px 2px #333;">¿Cómo puedo contactar al servicio de soporte?</h3>
+            <p>Puedes contactar a nuestro equipo de soporte enviando un correo electrónico a info@ejemplo.com o llamando al +0123456789.</p>
+        </li>
+    </ul>
+</div>
+
+</div>
+
+<div id="estudios" class="section section-funcionalidades">
+  <h2 style="color: #D04CCC; margin-top: 20px;">Elegir Carrera Universitaria</h2>
+<nav id="pasos-formulario">
+  <a href="#" onclick="showStep(0)">Paso 1: Intereses</a>
+  <a href="#" onclick="showStep(1)">Paso 2: Habilidades</a>
+  <a href="#" onclick="showStep(2)">Paso 3: Metas y aspiraciones</a>
+</nav>
+
+  <div class="container-formulario">
+  <!-- Barra de progreso -->
+  <div id="progress-bar">
+    <div id="progress" style="width: 0%;"></div>
+  </div>
+
+  <!-- Paso 1: Intereses -->
+  <div id="step-1" class="section-formulario">
+    <h2 style="color: #DCBCCA; text-shadow: 2px 2px #333;">Paso 1: Intereses</h2>
+    <form id="form-paso-1" onsubmit="return false;">
+      <label for="intereses">Intereses:</label><br>
+      <input type="text" id="intereses" name="intereses" required><br><br>
+      <button type="button" onclick="showStep(1)">Avanzar al Paso 2</button>
+    </form>
+  </div>
+
+  <!-- Paso 2: Habilidades -->
+  <div id="step-2" class="section-formulario">
+    <h2 style="color: #DCBCCA; text-shadow: 2px 2px #333;">Paso 2: Habilidades</h2>
+    <form id="form-paso-2" onsubmit="return false;">
+      <label for="habilidades">Habilidades:</label><br>
+      <input type="text" id="habilidades" name="habilidades" required><br><br>
+      <button type="button" onclick="showStep(0)">Regresar al Paso 1</button>
+      <button type="button" onclick="showStep(2)">Avanzar al Paso 3</button>
+    </form>
+  </div>
+
+  <!-- Paso 3: Metas y aspiraciones -->
+  <div id="step-3" class="section-formulario">
+    <h2 style="color: #DCBCCA; text-shadow: 2px 2px #333;">Paso 3: Metas y aspiraciones</h2>
+    <form id="form-paso-3" onsubmit="showRandomExampleCarrera(); return false;">
+      <label for="metas">Metas y aspiraciones:</label><br>
+      <input type="text" id="metas" name="metas" required><br><br>
+      <button type="button" onclick="showStep(1)">Regresar al Paso 2</button>
+      <button type="submit">Obtener Recomendaciones</button>
+    </form>
+  </div>
+
+  <!-- Resultados de Carrera -->
+  <div id="carrera-results" class="results" style="display:none;">
+    <h3>Resultados de Carrera</h3>
+    <!-- Las tarjetas se generarán aquí -->
+  </div>
+
+  <!-- Detalles de la Carrera -->
+  <div id="carrera-details" class="details-container" style="display:none;">
+    <h3>Detalles de la Carrera</h3>
+    <p><strong>Título:</strong> <span id="details-title"></span></p>
+    <p><strong>Porcentaje de éxito:</strong> <span id="details-percentage"></span></p>
+    <p><strong>Razones:</strong></p>
+    <ul id="details-reasons"></ul>
+  </div>
+</div>
+
+
+</div>
+
+<div id="relaciones" class="section section-funcionalidades">
+  <h2 style="color: #D04CCC; margin-top: 20px;">Evaluación de Relaciones Afectivas</h2>
+  <p>Responde el siguiente cuestionario para evaluar la compatibilidad y sostenibilidad de tu relación actual.</p>
+  <form id="relaciones-form" onsubmit="showResults('relaciones-form', 'relaciones-results'); showRandomExampleRelaciones(); return false;">
+      <label for="intereses">Intereses y pasatiempos:</label><br>
+      <input type="text" id="intereses" name="intereses" required><br><br>
+      <label for="preocupaciones">Preocupaciones y metas:</label><br>
+      <input type="text" id="preocupaciones" name="preocupaciones" required><br><br>
+      <input type="submit" value="Evaluar Relación">
+  </form>
+  <div id="relaciones-results" class="results" style="display:none;">
+      <h3>Resultados de Relaciones</h3>
+      <div id="relaciones-list"></div>
+  </div>
+  <div id="relaciones-details" class="details-container-relaciones">
+      <h3>Detalles de la Relación</h3>
+      <p><strong>Nombre:</strong> <span id="details-title-relaciones"></span></p>
+      <p><strong>Compatibilidad:</strong> <span id="details-percentage-relaciones"></span></p>
+      <p><strong>Razones:</strong></p>
+      <ul id="details-reasons-relaciones"></ul>
+      <p><strong>Eventos Recientes:</strong></p>
+      <div id="relaciones-events"></div>
+      <button class="favorite-button" onclick="alert('Relación añadida a favoritos');">Añadir a Favoritos</button>
+  </div>
+</div>
+
+<section class="perfil-section hidden" id="perfil">
+  <div class="perfil-contenedor">
+    <div class="row">
+      <button id="volverAtras" class="back-button" style="margin-left: 11px; margin-right: 11px;">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <h1 style="color: #D04CCC; margin-top: 5px;">Perfil</h1>
+    </div>
+    <div class="contenido-perfil">
+      <div class="perfil-datos">
+        <!-- Contenido del perfil -->
+        <p><strong>Nombre:</strong> <span id="nombrePerfil">Juan Pérez</span></p>
+        <p><strong>Correo electrónico:</strong> <span id="emailPerfil">juan@example.com</span></p>
+      </div>
+      <hr class="perfil-separator">
+      <h4 class="perfil-titulo">Estudios destacados:</h4>
+      <hr class="perfil-separator">
+      <h4 class="perfil-titulo">Relaciones destacadas:</h4>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="text-center text-lg-start text-dark" style="background-color: #5C5C5C;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-between p-4 text-white" style="background-color: #3A6517">
+    <!-- Left -->
+    <div class="me-5">
+      <span>Conéctate con nosotros en las redes sociales:</span>
+    </div>
+    <!-- Left -->
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com/" target="_blank" class="text-white me-4 icon-link">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="text-white me-4 icon-link">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.google.com/" target="_blank" class="text-white me-4 icon-link">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="text-white me-4 icon-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" class="text-white me-4 icon-link">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/" target="_blank" class="text-white me-4 icon-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold">Future AI S.A.</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #9BC846; height: 2px"/>
+          <p>
+            Future AI S.A. no comprometerá la seguridad de la información personal revelada a los usuarios que usen la aplicación Future AI
+          </p>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Productos</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #9BC846; height: 2px"/>
+          <p><a href="#!" class="text-dark">Future AI Mobile</a></p>
+          <p><a href="#!" class="text-dark">Future AI Home</a></p>
+          <p><a href="#!" class="text-dark">Future Engine</a></p>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Enlaces</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #9BC846; height: 2px"/>
+          <p><a href="#!" id="btnIniciarSesion2" class="text-dark">Iniciar sesión</a></p>
+          <p><a href="#!" class="text-dark">Convertirse en afiliado</a></p>
+          <p><a href="#ayuda" class="text-dark" onclick="scrollToInicio()">Ayuda</a></p>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #9BC846; height: 2px"/>
+          <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #333">
+    © 2024 Copyright:
+    <a class="text-dark">Álvaro Ramos Naranjo & Óscar Sánchez Rubio</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/estudiosRelaciones.js"></script>
+
+</body>
+</html>
